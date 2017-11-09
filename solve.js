@@ -4,17 +4,25 @@ var a = 'error';
 switch (_a[1]) {
   case '*':
     a = _a[0] * _a[2];
+    console.log(_a[0]+'*'+_a[2]+'='+a);
     break;
   case '+':
-    a = 0 + _a[0] + _a[2];
+    a = Number(_a[0]) + Number(_a[2]);
+    console.log(_a[0]+'+'+_a[2]+'='+a);
     break;
   case '-':
     a = _a[0] - _a[2];
+    console.log(_a[0]+'-'+_a[2]+'='+a);
     break;
   case '/':
     a = _a[0] / _a[2];
+    console.log(_a[0]+'/'+_a[2]+'='+a);
     break;
+  default:
+    console.log('unidentified math operation');
 }
 document.getElementById('answer').value = a;
-document.getElementById('answer').click();
-console.log(a);
+document.getElementById('answer').focus();
+
+var element = document.getElementById("solve");
+element.parentNode.removeChild(element);
