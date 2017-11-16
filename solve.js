@@ -1,6 +1,6 @@
 var robot = require('robotjs');
-
-for (int i=0; i<10000) {
+console.log('solver init');
+for (var i=0; i<10000; ++i) {
   solve();
   var init = performance.now();
   while (performance.now() - init < 100 ) {  }
